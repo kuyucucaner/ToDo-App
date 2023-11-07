@@ -1,0 +1,293 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #040D12, #183D3D,#5C8374,#93B1A6);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Navbar Stili */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  width: 100%;
+  background-color: rgba(4, 13, 18, 0.2); /* Semi-transparent background color */
+}
+
+/* Navbar menü öğeleri */
+nav ul {
+    list-style-type: none; /* Liste işaretlerini kaldırır */
+    margin: 0; /* Liste dış boşluğu kaldırır */
+    padding: 0; /* Liste iç boşluğu kaldırır */
+    display: flex; /* Liste öğelerini yatay düzende sıralar */
+    justify-content: flex-start; /* Liste öğelerini sola doğru hizalar */
+}
+
+
+/* Navbar menü öğeleri (list items) */
+nav li {
+    display: inline; /* Liste öğelerini yatay düzende sıralar */
+    margin: 10px; /* Liste öğeleri arasına boşluk ekler */
+    transition: transform 0.3s, background-color 0.3s; /* Geçiş efektleri ekler */
+}
+
+/* Navbar menü bağlantıları (links) */
+nav a {
+    text-decoration: none; /* Bağlantı altı çizgisini kaldırır */
+    color: white; /* Bağlantı metin rengini beyaz yapar */
+    font-weight: bold; /* Bağlantı metinini kalın yapar */
+    transition: color 0.3s;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav li:hover {
+    transform: scale(1.2); /* Öğeyi daha büyük bir şekilde büyüt */
+
+}
+
+nav a:hover {
+    color: #FFFFFF; /* Metin rengini beyaz yap */
+}   
+i {
+    pointer-events: none;
+}
+.logo-name{
+    padding-left: 10px;
+}
+h2{
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #93B1A6;
+  color: #93B1A6;
+  margin-top:5% ;
+  }
+body{
+    background-color: wheat;
+}
+/*TABLE STİLİ*/
+main {
+
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+ /* Tablo sığmazsa yatay kaydırma ekler */
+}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* main içindeki table etiketine gölge eklemesi */
+
+
+  }
+  
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+  }
+  
+  table tbody tr:nth-child(2n) {
+    background-color: #f7f7f7;
+  }
+  
+  table tbody td:last-child {
+    text-align: center;
+  }
+  #task-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #task-table th,
+  #task-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #task-table th {
+    background-color: #183D3D;
+    color: #fff;
+    text-align: center; /* Center align the text in table headers */
+  }
+  
+  /*button*/
+ 
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+#add-modal,#edit-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Modal Title */
+#title {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Input Fields */
+input[type="text"], input[type="date"] , select{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Input Hover and Focus Styles */
+input[type="text"]:hover, input[type="date"]:hover, select:hover
+input[type="text"]:focus, input[type="date"]:focus  , select:focus{
+  border-color: #005c68; /* Kırmızı renk */
+}
+
+/* Status Radio Buttons */
+/* Status Radio Buttons */
+#status-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#status-radio input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+/* Status Radio Hover Styles */
+#status-radio label:hover {
+  cursor: pointer;
+}
+
+/* Save Button */
+#add-save , #edit-save {
+  background-color: #008800; /* Yeşil renk */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+#add-save:hover ,  #edit-save:hover {
+  background-color: #006d00; /* Daha koyu yeşil renk */
+}
+
+/* Close Button */
+#add-close , #edit-close {
+  background-color: #a30000; /* Kırmızı renk */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+#add-close:hover  , #edit-close:hover{
+  background-color: #7e0000; /* Daha koyu kırmızı renk */
+}
+

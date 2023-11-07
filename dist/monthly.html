@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo App</title>
+    <link rel ="stylesheet" href = "../styles/monthly.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-rectangle-list fa-2xl" style="color: #ffffff;"></i> <a class="logo-name">TO DO APP</a></li>
+            <li><i class="fa-solid fa-house" style="color: #ffffff;"></i> <a href="index.html">Home</a></li>
+            <li><i class="fa-solid fa-calendar-day" style="color: #ffffff;"></i> <a href="daily.html">Daily Task</a></li>
+            <li><i class="fa-solid fa-calendar-week" style="color: #ffffff;"></i> <a href="weekly.html">Weekly Task</a></li>
+            <li><i class="fa-solid fa-calendar-days" style="color: #ffffff;"></i> <a href="monthly.html">Monthly Task</a></li>
+        </ul>
+    </nav>
+    <h2>Monthly Tasks</h2>
+    <main>
+        <table id="task-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="task-list">
+          
+            </tbody>
+          </table>
+    </main>
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <h2 id="title">Edit Task</h2>
+        <select id="edit-type">
+          <option value="Not Selected">Select a task type</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+        </select>
+        <input id="edit-name" type="text" placeholder="Task Name...">
+        <input id="edit-description" type="text" placeholder="Task Description...">
+        <input id="edit-date" type="date" disabled>
+        <label>Status:</label>
+        <div id="status-radio">
+          <label class="radio-label">
+            <input type="radio" name="status" value="Completed" checked> Completed
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="status" value="Not Completed"> Not Completed
+          </label>
+        </div>
+        <button id="edit-save">Edit</button>
+        <button id="edit-close">Close</button>
+      </div>
+    </div>
+    <script src ="../src/monthly.js"></script>
+</body>
+</html>
